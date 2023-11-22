@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { ProSidebar, Menu, MenuItem } from 'react-pro-sidebar';
-import { Box, Typography, useTheme, Divider } from '@mui/material';
+import { Box, Typography, useTheme, Divider, Grid } from '@mui/material';
 import { Link } from 'react-router-dom';
 import { tokens } from '../../theme';
 
@@ -107,17 +107,30 @@ const Sidebar = () => {
       >
         <ProSidebar collapsed={false} width='200px'>
           <Menu iconShape='square'>
-            <Box
-              component='img'
-              display='block'
-              textAlign='center'
-              justifyContent='space-between'
-              margin='0 auto'
-              p='0 10px 10px 10px'
-              alt='Chris Wessels Frontend Developer'
-              src={theme.palette.mode === 'dark' ? darkLogo : lightLogo}
-              maxWidth='100%'
-            />
+            <Box height='100px'>
+              <Grid container></Grid>
+              <Box
+                component='img'
+                display='inline'
+                textAlign='start'
+                justifyContent='space-between'
+                // margin='0 auto'
+                p='0 10px 10px 10px'
+                alt='Chris Wessels Frontend Developer'
+                src={theme.palette.mode === 'dark' ? darkLogo : lightLogo}
+                // maxWidth='40%'
+                maxHeight='100%'
+              />
+              <Box
+                width='160px'
+                display='inline'
+                justifyContent='center'
+                alignItems='center'
+              >
+                CJW
+              </Box>
+            </Box>
+
             <Box mb='0px'>
               <Box display='flex' justifyContent='center' alignItems='center'>
                 <Typography
